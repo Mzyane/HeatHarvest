@@ -1,0 +1,514 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background: linear-gradient(135deg, #0a687f, #0a687f);
+  color: white;
+}
+
+/* NAVBAR (GLASS EFFECT) */
+/* NAVBAR (FIXED & CENTERED PROPERLY) */
+nav {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 90%;
+  max-width: 1200px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  z-index: 1000;
+}
+
+/* ✅ LOGO */
+.logo img {
+  height: 45px;
+}
+
+/* ✅ CENTER BLUR CONTAINER */
+.nav-blur {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+
+  border-radius: 30px;
+  padding: 10px 25px;
+
+  display: flex;
+  align-items: center;
+}
+
+/* ✅ NAV LINKS */
+.nav-blur ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+
+  margin: 0;
+  padding: 0;
+}
+
+.nav-blur a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+/* ✅ PRICING BUTTON OUTSIDE */
+.pricing-btn {
+  background: #ffb84d;
+  padding: 10px 20px;
+  border-radius: 25px;
+  color: black;
+  text-decoration: none;
+}
+/* HERO (IMAGE + OVERLAY) */
+.hero {
+  height: 100vh;
+
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)),
+              url("images/heat-harvest-car.png") center/cover no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  color: white;
+  position: relative;
+}
+
+/* HERO CONTENT */
+.hero-content {
+  max-width: 800px;
+}
+
+/* TITLE */
+.hero h1 {
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+
+/* PARAGRAPH */
+.hero p {
+  font-size: 18px;
+  margin-bottom: 25px;
+  opacity: 0.9;
+}
+
+/* BUTTONS */
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.btn-outline {
+  border: 2px solid white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  color: white;
+  text-decoration: none;
+}
+/* SECTION */
+.section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+/* BUTTON */
+.btn {
+  background: #ffb84d;
+  color: black;
+  padding: 12px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* CARD SECTION */
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 40px;
+}
+.card {
+  background: linear-gradient(135deg, #ffb84d, #ffb84d);
+  box-shadow: 0 0 15px rgba(0, 207, 255, 0.2);
+  padding: 25px;
+  border-radius: 15px;
+  width: 220px;
+  text-align: center;
+  transition: transform 0.3s;
+  margin-top: -5%;
+  margin-bottom: 15%;
+
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0, 207, 255, 0.4);
+}
+
+
+/* PAGE TRANSITION */
+.page {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.fade-out {
+  opacity: 0;
+}
+
+/* TEXT ANIMATION */
+.animate-text {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+  transition: 1s;
+}
+
+.delay-1 { transition-delay: 0.3s; }
+.delay-2 { transition-delay: 0.6s; }
+/* BENEFITS CONTAINER */
+.benefits-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 100px;
+  flex-wrap: wrap;
+}
+
+/* BENEFIT CARD */
+.benefit-card {
+  background: linear-gradient(135deg, #ffb84d, #ffb84d);
+  padding: 30px;
+  border-radius: 20px;
+  width: 260px;
+  text-align: center;
+  transition: 0.3s;
+
+  box-shadow: 0 0 15px rgba(0, 207, 255, 0.2);
+}
+
+.benefit-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0, 207, 255, 0.4);
+}
+
+/* ICON STYLE */
+.icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+/* TEXT */
+.benefit-card h3 {
+  margin: 10px 0;
+}
+
+.benefit-card p {
+  font-size: 14px;
+  opacity: 0.9;
+}
+/* SECTION */
+.feature-section {
+  display: flex;
+  justify-content: center;
+  padding: 50px 20px;
+}
+
+/* CARD */
+.feature-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: linear-gradient(135deg, #ffb84d, #ffb84d);
+  border-radius: 20px;
+  padding: 40px;
+
+  
+  width: 85%;              /* ✅ smaller than before */
+  max-width: 1000px;       /* ✅ prevents it from being too wide */
+  margin: 0 auto; 
+
+
+  position: relative;
+
+  box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+  gap: 80px;
+}
+.feature-text {
+  flex: 50; /* ✅ takes equal space */
+  max-width: 480px;
+}
+.feature-image {
+  flex: 1; /* ✅ equal space */
+  position: relative;
+  display: flex;
+  justify-content: center; /* ✅ center car */
+  align-items: center;
+    margin-top: -10%;
+
+
+}
+.car-img {
+  width: 480px;           /* ✅ bigger car */
+  max-width: 100%;
+  z-index: 2;             /* ✅ above circle */
+  filter: drop-shadow(0 20px 40px rgba(0, 207, 255, 0.5));
+}
+.feature-image img {
+  max-width: 100%;
+  transform: translateY(10px);
+  filter: drop-shadow(0 15px 30px rgba(0, 207, 255, 0.4));
+}
+
+.feature-section {
+  margin-top: -60px;   /* keeps it overlapping hero nicely */
+  margin-bottom: -60px; /* ✅ adds BIG clean space before benefits */
+}
+.circle {
+  position:absolute;
+
+  width: 310px;
+  height: 310px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #00cfff,
+    transparent
+  );
+
+  opacity: 0.1;
+  z-index: 21;
+  
+  transform: translate(-50%, -50%);
+  animation: spin 6s linear infinite;
+
+}
+@keyframes spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+/* PRODUCT SECTION */
+.product-section {
+  display: flex;
+  justify-content: center;
+  padding: 60px 20px;
+}
+
+/* CONTAINER */
+.product-container {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* CARD */
+.product-card {
+  position: relative;
+  width: 260px;
+  height: 200px;
+
+  border-radius: 20px;
+  overflow: hidden;
+
+  transition: 0.3s;
+}
+
+/* IMAGE */
+.product-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* OVERLAY */
+.product-overlay {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  padding: 15px;
+  color: white;
+
+  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+}
+
+/* RATING */
+.rating {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+
+  background: rgba(255,255,255,0.2);
+  padding: 4px 10px;
+  border-radius: 10px;
+  font-size: 12px;
+}
+
+/* PLUS BUTTON */
+.plus {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  background: white;
+  color: black;
+
+  width: 30px;
+  height: 30px;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: bold;
+}
+
+/* FEATURED CENTER CARD */
+.featured {
+  transform: scale(1.1);
+}
+
+/* LABEL */
+.label {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  background: #7a8f4d;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-size: 13px;
+}
+
+/* HOVER */
+.product-card:hover {
+  transform: translateY(-10px) scale(1.05);
+}
+/* SECTION */
+.pricing-section {
+  text-align: center;
+  padding: 120px 20px;
+}
+
+/* TITLE */
+.pricing-section h1 {
+  font-size: 40px;
+}
+
+.subtitle {
+  opacity: 0.7;
+  margin-bottom: 40px;
+}
+
+/* CONTAINER */
+.pricing-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* CARD */
+.pricing-card {
+  background: #111;
+  padding: 30px;
+  border-radius: 20px;
+
+  width: 260px;
+  text-align: left;
+
+  transition: 0.3s;
+}
+
+/* FEATURED CARD */
+.featured {
+  background: linear-gradient(135deg, #0a2f4f, #061a2b);
+  transform: scale(1.05);
+  position: relative;
+}
+
+/* TAG */
+.tag {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  background: #6a7cff;
+  padding: 5px 12px;
+  border-radius: 10px;
+  font-size: 12px;
+}
+
+/* PRICE */
+.pricing-card h2 {
+  font-size: 32px;
+  margin: 10px 0;
+}
+
+/* BUTTONS */
+.btn-main {
+  width: 100%;
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+
+  background: #5f6cff;
+  color: white;
+}
+
+.btn-light {
+  width: 100%;
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+
+  background: #222;
+  color: white;
+}
+
+/* LIST */
+.pricing-card ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.pricing-card li {
+  margin-bottom: 10px;
+  opacity: 0.9;
+}
+
+/* HOVER */
+.pricing-card:hover {
+  transform: translateY(-10px);
+}

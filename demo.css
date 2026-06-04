@@ -1,0 +1,111 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #000;
+  color: white;
+}
+
+/* NAVBAR */
+nav {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 1200px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.nav-blur {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(12px);
+  border-radius: 30px;
+  padding: 10px 25px;
+}
+
+.nav-blur ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-blur a {
+  color: white;
+  text-decoration: none;
+}
+
+/* BUTTON */
+.btn {
+  background: #ffb84d;
+  padding: 10px 20px;
+  border-radius: 25px;
+  color: black;
+  text-decoration: none;
+}
+
+/* DEMO SECTION */
+.demo-section {
+  padding: 120px 20px;
+  text-align: center;
+}
+
+/* TITLE */
+.demo-section h1 {
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+
+/* MAIN VIDEO */
+.main-video {
+  width: 80%;
+  max-width: 900px;
+  margin: auto;
+  border-radius: 20px;
+  overflow: hidden;
+
+  box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+}
+
+.main-video video {
+  width: 100%;
+  height: auto;
+}
+
+/* TEXT */
+.demo-text {
+  margin: 20px 0;
+  opacity: 0.8;
+}
+
+/* SMALL VIDEO GRID */
+.video-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.video-grid video {
+  width: 250px;
+  border-radius: 15px;
+
+  object-fit: cover;
+
+  box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+}
+.video-grid video:hover {
+  transform: scale(1.05);
+  transition: 0.3s;
+}
+.main-video video {
+  filter: brightness(0.9);
+}
